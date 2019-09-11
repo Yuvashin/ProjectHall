@@ -1,0 +1,74 @@
+﻿@model ProjectHall5.Models.TotalPrice
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>TotalPrice</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.UserCatering.Email)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.UserCatering.Email)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.UserDecor.Email)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.UserDecor.Email)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Venue.VenueName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Venue.VenueName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TotalBookingPrice)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TotalBookingPrice)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TotalVenuePrice)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TotalVenuePrice)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TotalDecorPrice)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TotalDecorPrice)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TotalCateringPrice)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TotalCateringPrice)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.TotalPricesID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

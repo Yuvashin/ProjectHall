@@ -1,0 +1,69 @@
+﻿@model IEnumerable<ProjectHall5.Models.TotalPrice>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.UserCatering.Email)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.UserDecor.Email)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Venue.VenueName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TotalBookingPrice)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TotalVenuePrice)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TotalDecorPrice)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TotalCateringPrice)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.UserCatering.Email)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.UserDecor.Email)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Venue.VenueName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TotalBookingPrice)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TotalVenuePrice)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TotalDecorPrice)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TotalCateringPrice)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.TotalPricesID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.TotalPricesID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.TotalPricesID })
+        </td>
+    </tr>
+}
+
+</table>

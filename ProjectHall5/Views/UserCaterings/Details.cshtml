@@ -1,0 +1,50 @@
+﻿@model ProjectHall5.Models.UserCatering
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>UserCatering</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Booking.OccasionType)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Booking.OccasionType)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Catering.CateringPackage)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Catering.CateringPackage)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Email)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Email)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CateringCost)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CateringCost)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.UserCateringID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
